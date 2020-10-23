@@ -162,5 +162,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private  void reset(){
+        gepElet3.setImageResource(R.drawable.heart2);
+        gepElet2.setImageResource(R.drawable.heart2);
+        gepElet1.setImageResource(R.drawable.heart2);
 
+        jatekosElet3.setImageResource(R.drawable.heart2);
+        jatekosElet2.setImageResource(R.drawable.heart2);
+        jatekosElet1.setImageResource(R.drawable.heart2);
+
+        dontetlen.setText("Döntetlenek száma: 0");
+
+        dontetlenMero=0;
+
+        gepEletero = 3;
+        jatekosEletero =3;
+    }
 }
