@@ -1,5 +1,8 @@
 package com.example.kopapirollo;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView dontetlen;
     Random r = new Random();
     int teValaszod,dontetlenMero,gepValasza,gepEletero,jatekosEletero;
+    private Object String;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         jatekosEletero =3;
     }
 
+
     private void valasz(){
         gepValasza = r.nextInt(3)+1;
         switch (gepValasza){
@@ -110,7 +116,51 @@ public class MainActivity extends AppCompatActivity {
        }
     }
 
-    private  void eleterok(){
 
+    private  void eleterok(){
+        String nyertes = "";
+        AlertDialog.Builder builder;
+
+        builder = new AlertDialog.Builder(this);
+        builder.setMessage(nyertes +"\nSzeretnéd ujrainditani a programot?")
+                .setCancelable(false)
+                .setPositiveButton("igen", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //reset();
+                    }
+                })
+                .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                });
+        //Creating dialog box
+        AlertDialog alert = builder.create();
+        //Setting the title manually
+        alert.setTitle("AlertDialogExample");
+
+
+
+        switch (jatekosEletero){
+            case 2: jatekosElet3.setImageResource(R.drawable.heart1);break;
+            case 1: jatekosElet2.setImageResource(R.drawable.heart1);break;
+            case 0: jatekosElet1.setImageResource(R.drawable.heart1);break;
+        }
+
+        if (jatekosEletero == 0){
+            alert.show();
+        }
+
+        switch (gepEletero) {
+            case 2: gepElet3.setImageResource(R.drawable.heart1);break;
+            case 1: gepElet2.setImageResource(R.drawable.heart1);break;
+            case 0: gepElet1.setImageResource(R.drawable.heart1);break;
+        }
+
+        if (gepEletero == 0){
+            alert.show();
+        }
     }
+
+
 }
