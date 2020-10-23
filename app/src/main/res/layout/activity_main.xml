@@ -110,7 +110,53 @@
             android:textSize="25dp"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="1200dp"
+        android:layout_height="200dp"
+        android:paddingTop="90dp"
+        android:paddingLeft="130dp">
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/paper"
+            android:id="@+id/gepJele"></ImageView>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="1200dp"
+        android:layout_height="750dp"
+        android:paddingTop="180dp"
+        android:paddingLeft="110dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gép válasza"
+            android:textSize="25dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="1200dp"
+        android:layout_height="400dp"
+        android:paddingTop="220dp"
+        android:paddingLeft="130dp">
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/paper"
+            android:id="@+id/jatekosJele"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="1200dp"
+        android:layout_height="750dp"
+        android:paddingTop="310dp"
+        android:paddingLeft="110dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a te válaszod"
+            android:textSize="25dp"/>
+    </LinearLayout>
 
 
 
